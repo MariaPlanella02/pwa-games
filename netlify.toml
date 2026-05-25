@@ -2,7 +2,6 @@
   command = "npm run build"
   publish = "dist/pwa-games/browser"
 
-[[plugins]]
-  package = "@netlify/angular-runtime"
-  [plugins.inputs]
-  skip_ssr = true
+[build.environment]
+  NETLIFY_SKIP_SSR = "true"
+  NETLIFY_USE_LEGACY_RUNTIME = "true"
